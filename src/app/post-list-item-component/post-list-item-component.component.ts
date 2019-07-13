@@ -9,6 +9,7 @@ export class PostListItemComponentComponent implements OnInit {
 
   @Input() postName: string;
   @Input() statusPost : string;
+  @Input() creationPost: Date;
 
   constructor() { }
 

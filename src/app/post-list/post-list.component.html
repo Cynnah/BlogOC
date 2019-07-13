@@ -1,6 +1,7 @@
 <ul class="list-group">
-    <app-post-list-item-component [postName]="postOne" [statusPost]="'éteint'"></app-post-list-item-component>
-    <app-post-list-item-component [postName]="postTwo" [statusPost]="'allumé'"></app-post-list-item-component>
-    <app-post-list-item-component [postName]="postThree" [statusPost]="'éteint'"></app-post-list-item-component>
-    <app-post-list-item-component [postName]="postQuatre" [statusPost]="'allumé'"></app-post-list-item-component>
+    <app-post-list-item-component 
+        *ngFor= "let post of posts"
+        [postName]="post.name" 
+        [statusPost]="post.loveIts"
+        [creationPost]="post.created_at"></app-post-list-item-component>
 </ul>
