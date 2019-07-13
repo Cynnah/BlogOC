@@ -1,7 +1,9 @@
-<h4>{{postName}}  --  Date de création : {{ getStatus() }}</h4>
+<h4>{{postName}}  --  Statut du post : {{ getStatus() }}</h4>
+
+<h5>Date de création : 01/01/1999</h5>
 
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque necessitatibus aut laboriosam officiis consectetur est sunt assumenda iusto consequuntur facere dignissimos sequi nemo nostrum consequatur aspernatur error, hic ratione possimus.</p>
 
-<button class="btn btn-success">Love It</button>
+<button class="btn btn-success" (click)="onLoveIt()">Love It</button>
 
 <button class="btn btn-danger">Don't Love It</button>

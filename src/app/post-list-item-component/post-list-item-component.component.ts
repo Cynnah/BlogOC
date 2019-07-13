@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-post-list-item-component',
@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListItemComponentComponent implements OnInit {
 
-  postName: string = 'Mon premier Post'
-  creationDate: string = '01/07/2019'
+  @Input() postName: string;
+  @Input() statusPost : string;
 
   constructor() { }
 
@@ -16,7 +16,11 @@ export class PostListItemComponentComponent implements OnInit {
   }
 
   getStatus() {
-    return this.creationDate
+    return this.statusPost
+  }
+
+  onLoveIt() {
+    console.log("LOVE IT --> +1")
   }
 
 }

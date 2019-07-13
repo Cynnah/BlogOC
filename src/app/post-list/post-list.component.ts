@@ -12,4 +12,8 @@ export class PostListComponent implements OnInit {
   ngOnInit() {
   }
 
+  postOne = 'Coucou';
+  postTwo = 'Bonjour';
+  postThree = 'Salutations';
+  postQuatre = 'Salut';
 }
