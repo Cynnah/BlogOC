@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class PostListItemComponentComponent implements OnInit {
 
   postName: string = 'Mon premier Post'
+  creationDate: string = '01/07/2019'
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getStatus() {
+    return this.creationDate
   }
 
 }
