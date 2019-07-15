@@ -32,4 +32,8 @@ export class PostListItemComponentComponent implements OnInit {
     console.log("LOVE IT --> +1")
   }
 
+  onDontLoveIt() {
+    console.log("DON'T LOVE IT --> -1")
+  }
+
 }
