@@ -28,7 +28,7 @@ export class PostListComponent implements OnInit {
     {
       name: 'Critiques sur Altered Carbon de Richard Morgan',
       content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque necessitatibus aut laboriosam officiis consectetur est sunt assumenda iusto consequuntur facere dignissimos sequi nemo nostrum consequatur aspernatur error, hic ratione possimus.',
-      loveIts: 5,
+      loveIts: -65,
       created_at: '01/03/2020'
     },
     {

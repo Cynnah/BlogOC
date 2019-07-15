@@ -1,12 +1,17 @@
-<div style="width:20px;height:20px;background-color:red;"
-    *ngIf="statusPost === 'éteint'"></div>
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': statusPost >= 0,
+                'list-group-item-danger': statusPost  < 0}"> 
+    <div 
+        style="background-color:red;"
+        *ngIf="statusPost <= 0"></div>
+        <h4>{{postName}}  --  Statut du post : {{ getStatus() }}</h4>
 
-<h4>{{postName}}  --  Statut du post : {{ getStatus() }}</h4>
+        <h5>Date de création : {{ creationPost }}</h5>
 
-<h5>Date de création : {{ creationPost }}</h5>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque necessitatibus aut laboriosam officiis consectetur est sunt assumenda iusto consequuntur facere dignissimos sequi nemo nostrum consequatur aspernatur error, hic ratione possimus.</p>
 
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque necessitatibus aut laboriosam officiis consectetur est sunt assumenda iusto consequuntur facere dignissimos sequi nemo nostrum consequatur aspernatur error, hic ratione possimus.</p>
+        <button class="btn btn-success" (click)="onLoveIt()">Love It</button>
 
-<button class="btn btn-success" (click)="onLoveIt()">Love It</button>
-
-<button class="btn btn-danger">Don't Love It</button>
+        <button class="btn btn-danger">Don't Love It</button>
+    
+</li> 

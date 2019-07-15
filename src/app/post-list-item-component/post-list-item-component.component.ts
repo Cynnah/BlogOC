@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PostListItemComponentComponent implements OnInit {
 
   @Input() postName: string;
-  @Input() statusPost : string;
+  @Input() statusPost : Number;
   @Input() creationPost: Date;
 
   constructor() { }
@@ -18,6 +18,14 @@ export class PostListItemComponentComponent implements OnInit {
 
   getStatus() {
     return this.statusPost
+  }
+
+  getColor() {
+    if(this.statusPost >= 0) {
+      return 'green';
+    } else if(this.statusPost <= 0) {
+      return 'red';
+    }
   }
 
   onLoveIt() {
